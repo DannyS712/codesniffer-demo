@@ -34,12 +34,24 @@
 		</div>
 	</div>
 	
+	<textarea styles="display:none;" id=phpcs-start-example>
+<?php
+// Random example code
+class Demo {
+	static function   doStuff ( ) {
+		return true;
+	}
+}
+	</textarea>
+	
 	<script>
 		var phpcs = {};
 		window.phpcs = phpcs;
 		phpcs.editor = ace.edit( 'phpcs-input-editor' );
 		phpcs.editor.session.setMode('ace/mode/php');
 		phpcs.editor.setTheme("ace/theme/github");
+
+		phpcs.editor.setValue( document.getElementById( 'phpcs-start-example' ).innerText );
 	</script>
 </body>
 
