@@ -7,9 +7,10 @@
 	<script src="//ajaxorg.github.io/ace-builds/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="https://phan.github.io/demo/php.js"></script>
 	<style>
-		#phpcs-split-fields { display: flex; }
+		body { background-color: #c7c7c3; }
+		#phpcs-split-fields { display: flex; height: 500px; }
 		#phpcs-input-editor-wrap, #phpcs-result-wrap { width: 50%; }
-		#phpcs-input-editor, #phpcs-result { width: 100%; }
+		#phpcs-input-editor, #phpcs-result { width: 100%; height: 100%; }
 		pre { background-color: #f9ffff; }
 	</style>
 </head>
@@ -31,6 +32,14 @@
 			</pre>
 		</div>
 	</div>
+	
+	<script>
+		var phpcs = {};
+		window.phpcs = phpcs;
+		phpcs.editor = ace.edit( 'phpcs-input-editor' );
+		phpcs.editor.session.setMode('ace/mode/php');
+		phpcs.editor.setTheme("ace/theme/github");
+	</script>
 </body>
 
 </html>	
