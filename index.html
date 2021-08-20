@@ -8,8 +8,8 @@
 	<script type="text/javascript" src="https://phan.github.io/demo/php.js"></script>
 	<style>
 		#phpcs-split-fields { display: flex; }
-		#phpcs-input-editor, #phpcs-result { width: 50%; }
-		#phpcs-input-editor textarea, #phpcs-result pre { width: 100%; }
+		#phpcs-input-editor-wrap, #phpcs-result-wrap { width: 50%; }
+		#phpcs-input-editor, #phpcs-result { width: 100%; }
 		pre { background-color: #f9ffff; }
 	</style>
 </head>
@@ -22,11 +22,11 @@
 		<button id="phpcs-analyze">Analyze code</button>
 	</div>
 	<div id="phpcs-split-fields">
-		<div id="phpcs-input-editor">
-			<textarea>Huh?</textarea>
+		<div id="phpcs-input-editor-wrap">
+			<div id="phpcs-input-editor"></div>
 		</div>
-		<div id="phpcs-result">
-			<pre>
+		<div id="phpcs-result-wrap">
+			<pre id="phpcs-result">
 				Output...
 			</pre>
 		</div>
